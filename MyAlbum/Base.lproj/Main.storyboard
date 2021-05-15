@@ -16,10 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zu-Ba-T1g">
-                                <rect key="frame" x="153" y="769" width="110" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zu-Ba-T1g">
+                                <rect key="frame" x="157" y="769" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0U4-yl-d5D"/>
+                                    <constraint firstAttribute="height" constant="50" id="M7e-5h-RoA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="Refresh">
                                     <color key="titleColor" systemColor="systemPinkColor"/>
                                 </state>
@@ -27,27 +30,42 @@
                                     <action selector="homework:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3g2-x6-tMF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MyPics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUQ-5T-PqG">
-                                <rect key="frame" x="145" y="99" width="125" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyPics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUQ-5T-PqG">
+                                <rect key="frame" x="145" y="82" width="125" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="puJ-ic-rMe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="cLM-Pt-Zgp">
-                                <rect key="frame" x="40" y="201" width="334" height="338"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLH-UJ-08e">
+                                <rect key="frame" x="111.5" y="674" width="191" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="cLM-Pt-Zgp">
+                                <rect key="frame" x="48" y="201" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="nRa-05-0ii"/>
+                                    <constraint firstAttribute="height" constant="320" id="rJ7-SD-H2z"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLH-UJ-08e">
-                                <rect key="frame" x="112" y="673" width="191" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gUQ-5T-PqG" secondAttribute="trailing" constant="144" id="395-Yi-1Pj"/>
+                            <constraint firstItem="gUQ-5T-PqG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="7qB-SC-AuR"/>
+                            <constraint firstItem="3Zu-Ba-T1g" firstAttribute="top" secondItem="eLH-UJ-08e" secondAttribute="bottom" constant="50" id="MOL-gH-Xol"/>
+                            <constraint firstItem="cLM-Pt-Zgp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qph-v3-naX"/>
+                            <constraint firstItem="gUQ-5T-PqG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="SJB-vF-DVS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Zu-Ba-T1g" secondAttribute="bottom" constant="43" id="WVr-ty-2zE"/>
+                            <constraint firstItem="cLM-Pt-Zgp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="157" id="c54-RA-Zyt"/>
+                            <constraint firstItem="eLH-UJ-08e" firstAttribute="centerX" secondItem="3Zu-Ba-T1g" secondAttribute="centerX" id="onN-YT-vtM"/>
+                            <constraint firstItem="3Zu-Ba-T1g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="txR-8a-Jvm"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="priceLabel" destination="eLH-UJ-08e" id="pmq-Fy-jez"/>
