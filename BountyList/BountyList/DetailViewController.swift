@@ -30,7 +30,6 @@ class DetailViewController: UIViewController {
             nameLabel.text = name
             bountyLabel.text = "\(bounty)"
         }
-        
     }
     
     
